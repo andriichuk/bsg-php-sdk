@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Andriichuk\Bsg;
 
+use Andriichuk\Bsg\Contracts\BsgClientInterface;
 use Andriichuk\Bsg\Exceptions\BsgApiException;
 use Andriichuk\Bsg\Requests\SendSmsRequest;
 use Andriichuk\Bsg\Responses\SendSmsResponse;
@@ -17,7 +18,7 @@ use RuntimeException;
  * @see https://bsg.world/developers/rest-api/sending-sms
  * @see https://bsg.world/developers/rest-api/viewing-an-sms-status
  */
-final class BsgClient
+final class BsgClient implements BsgClientInterface
 {
     private const string BASE_URI = 'https://api.bsg.world';
 
