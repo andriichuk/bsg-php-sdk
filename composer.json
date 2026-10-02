@@ -1,0 +1,52 @@
+{
+    "name": "andriichuk/bsg-php-sdk",
+    "description": "Framework-agnostic PHP SDK for the BSG World API",
+    "keywords": [
+        "bsg",
+        "bsg-world",
+        "php",
+        "sdk",
+        "sms"
+    ],
+    "homepage": "https://github.com/andriichuk/bsg-php-sdk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Serhii Andriichuk",
+            "email": "andriichuk29@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "guzzlehttp/guzzle": "^7.9||^8.2"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "pestphp/pest": "^4.0",
+        "phpstan/phpstan": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Andriichuk\\Bsg\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Andriichuk\\Bsg\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "format": "pint",
+        "test": "pest"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
