@@ -15,7 +15,6 @@ use GuzzleHttp\RequestOptions;
 use RuntimeException;
 
 /**
- * @see https://bsg.world/developers/rest-api/sending-sms
  * @see https://bsg.world/developers/rest-api/viewing-an-sms-status
  */
 final class BsgClient implements BsgClientInterface
@@ -33,6 +32,9 @@ final class BsgClient implements BsgClientInterface
         ]);
     }
 
+    /**
+     * @see https://bsg.world/developers/rest-api/sending-sms
+     */
     public function sendSms(SendSmsRequest $request): SendSmsResponse
     {
         $response = $this->httpClient->request('POST', '/rest/sms/create', [
